@@ -78,14 +78,38 @@ fun main(args : Array<String>){
        }
     }
 
+    val respuestaFilter = notas.filter {
+        it in 1..4
+    }.map {
+        it *2
+    }
+
+    respuestaFilter.forEach{
+        println(it)
+    }
 
     notas2.forEach{
         println("Notas 2: $it")
     }
 
+    val novias = arrayListOf(1,2,3,4,5)
+    val respuestaNovia = novias.any{
+        it == 3
+    }
+    println(respuestaNovia)
 
+    val tazos = arrayListOf(1,2,3,4,5,6,7)
+    val respuestaTazos = tazos.all {
+        it > 1
+    }
 
+    println(respuestaTazos)
 
+    val totalTazos = tazos.reduce{valorAcumulado,tazo ->
+        valorAcumulado + tazo
+    }
+
+    println(totalTazos)
 
 }
 
