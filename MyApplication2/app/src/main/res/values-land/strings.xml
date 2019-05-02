@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Abrir Android Studio o IntelliJ, pero no ambos</string>
+    <string name="hola_mundo">Adios Mundo Cruel</string>
+</resources>
