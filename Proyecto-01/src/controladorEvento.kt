@@ -10,8 +10,7 @@ fun controlEvento(registro: String,action: String,oldRegistro:String = "None"){
 }
 
 fun writeFileEv(str:String,tipo:String ="None"):String{
-    println("¿Hola?")
-    println(str)
+    if(str=="") return "Registro cancelado"
     try{
         val fo = FileWriter("eventos.txt",true)
         if(tipo.equals("None"))
@@ -41,6 +40,7 @@ fun readFileEv(registro: String,action: String):String{
     }
     arr=arr.substring(0,arr.length-1)
     if(action.equals("Consultar")){
+        if(registro=="") return arr
         val inicio=arr.indexOf(registro)
         if(inicio!=-1){
             var aBuscar = registro+arr.substringAfter(registro)
@@ -112,7 +112,7 @@ fun checkActionEvento(action:String,registro:String,oldRegistro: String){
         "Consultar"->{
             res=readFileEv(registro,action)
             if(!res.equals("No existen registros"))
-                consultar(res,action)
+                consultarEvent(res,action)
             else
                 JOptionPane.showMessageDialog(null,res)
         }

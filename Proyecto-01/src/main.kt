@@ -121,8 +121,10 @@ class MenuPrincipal(titulo:String):JFrame(){
 
         var iEvento = ImageIcon("src\\resources\\evento\\new.jpg")
         var iEventoDel = ImageIcon("src\\resources\\evento\\delete.png")
+        var iEventoS = ImageIcon("src\\resources\\evento\\search.png")
         iEvento = convertIcon(iEvento)
         iEventoDel = convertIcon(iEventoDel)
+        iEventoS = convertIcon(iEventoS)
 
         val event = JMenu("Eventos")
         delt.mnemonic = KeyEvent.VK_5
@@ -131,16 +133,29 @@ class MenuPrincipal(titulo:String):JFrame(){
         event1.mnemonic = KeyEvent.VK_1
         event1.toolTipText = "Registra un nuevo evento"
         event1.addActionListener{
-            regEvent()
+            regEvent("Registro")
         }
+
+        //Consultar
+        val consEvent = JMenuItem("Consultar Eventos",iEventoS)
+        consEvent.mnemonic = KeyEvent.VK_2
+        consEvent.toolTipText = "Consulta los eventos"
+        consEvent.addActionListener{
+            val aCon = JOptionPane.showInputDialog(null,"Ingrese el Nombre del Evento que desea buscar","Consulta",QUESTION_MESSAGE)
+            regEvent("Consultar",aCon)
+        }
+
+
+
         val event2 = JMenuItem("Eliminar evento",iEventoDel)
         event2.mnemonic = KeyEvent.VK_2
         event2.toolTipText = "Elimina un evento"
         event2.addActionListener{
-            controlador("Eliminar","Eliminar")
+            controlEvento("Eliminar","Eliminar")
         }
 
         event.add(event1)
+        event.add(consEvent)
         event.add(event2)
 
 
