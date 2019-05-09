@@ -12,7 +12,7 @@ class JOptionPaneMultiInput(action:String,aConsultar:String):JFrame() {
 
     init {
         var tipo:String
-        var accion=""
+        var accion=action
         if (action.equals("ConsultarAll")){
             tipo=""
             accion=action
@@ -23,6 +23,7 @@ class JOptionPaneMultiInput(action:String,aConsultar:String):JFrame() {
         }else{
             tipo = createUI(action)
             println(tipo)
+            println(action)
             if(tipo.equals(""))
             accion=action
         }
