@@ -10,6 +10,7 @@ fun control(registro: String,action: String,oldRegistro:String = "None"){
 }
 
 fun writeFile(str:String,tipo:String ="None"):String{
+    if(str=="") return "Registro cancelado"
     try{
         val fo = FileWriter("registros.txt",true)
         if(tipo.equals("None"))

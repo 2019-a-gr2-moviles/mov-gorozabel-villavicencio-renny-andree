@@ -3,15 +3,28 @@ import java.awt.SystemColor.control
 import javax.swing.*
 import controlEvento as controlador
 
-class registrarEvento():JFrame() {
+class registrarEvento(action: String,aCons: String):JFrame() {
 
     init {
-        val nuevoEvento=createUI()
-        controlador(nuevoEvento,"Registro")
+        var tipo:String
+        var accion=""
+        if (action.equals("ConsultarAll")){
+            tipo=""
+            accion=action
+        }
+        else if(action.equals("Consultar")){
+            tipo=aCons
+            accion=action
+        }else{
+            tipo = createUI(action)
+            println(tipo)
+            accion=action
+        }
+        controlador(tipo,accion)
 
     }
 
-    fun createUI(): String{
+    fun createUI(action: String): String{
         val nombreF = JTextField(10)
         val fechaF = JTextField(10)
         val bonusF = JTextField(10)
@@ -50,11 +63,12 @@ class registrarEvento():JFrame() {
                 array
             )
             return registro.nombre+","+registro.fecha+","+registro.servantsBonus[0]+","+registro.servantsBonus[1]
-        }
+        }else if ( result == JOptionPane.CANCEL_OPTION)
+            dispose()
         return ""
     }
 }
 
-fun regEvent() {
-    val frame = registrarEvento()
+fun regEvent(action:String,aCons:String = "Todos") {
+    val frame = registrarEvento(action,aCons)
 }

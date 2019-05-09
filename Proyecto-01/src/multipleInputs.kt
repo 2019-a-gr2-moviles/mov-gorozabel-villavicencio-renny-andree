@@ -22,6 +22,8 @@ class JOptionPaneMultiInput(action:String,aConsultar:String):JFrame() {
             accion=action
         }else{
             tipo = createUI(action)
+            println(tipo)
+            if(tipo.equals(""))
             accion=action
         }
         controlador(tipo,accion)
@@ -76,8 +78,8 @@ class JOptionPaneMultiInput(action:String,aConsultar:String):JFrame() {
                 pathImagen.getCurrentDirectory().toString() + "\\" + pathImagen.selectedFile.name
             )
             return registro.nombre+","+registro.origen+","+registro.clase+","+registro.path
-
-        }
+        }else if(result== JOptionPane.CANCEL_OPTION)
+            return ""
         return ""
     }
 }

@@ -1,2 +1,3 @@
 Prisma Codes,Agosto,Nero,Melt
-Onigashima,Septiembre,Merlin,Nero
+Nero Fest,Septiembre,Nero,Nero Bridge
+Navidad,Diciembre,Altera,Arturia
