@@ -1,3 +1,2 @@
 Prisma Codes,Agosto,Nero,Melt
 Nero Fest,Septiembre,Nero,Nero Bridge
-Navidad,Diciembre,Altera,Arturia

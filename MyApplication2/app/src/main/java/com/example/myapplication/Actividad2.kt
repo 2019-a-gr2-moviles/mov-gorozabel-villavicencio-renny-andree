@@ -3,23 +3,21 @@ package com.example.myapplication
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_actividad2.*
 
-class MainActivity : AppCompatActivity() {
+class Actividad2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_actividad2)
 
-        btn_Actividad_2.setOnClickListener {
+        btn_Actividad_1.setOnClickListener {
             irAActividadDos()
         }
     }
 
     fun irAActividadDos(){
-        val intent = Intent(this,Actividad2::class.java)
+        val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
     }
-
-
 }
