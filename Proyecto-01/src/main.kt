@@ -11,7 +11,6 @@ class MenuPrincipal(titulo:String):JFrame(){
         createUI(titulo)
     }
     private fun createUI(titulo:String){
-        title = titulo
         createMenuBar()
 
         defaultCloseOperation = JFrame.EXIT_ON_CLOSE
