@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn_parcelabel.setOnClickListener { irAParcelabel() }
+        btn_Adapter.setOnClickListener { irAAdapter() }
 
         val tito: Usuario? = this.intent
             .getParcelableExtra<Usuario>("usuario1")
@@ -34,5 +35,10 @@ class MainActivity : AppCompatActivity() {
         intentExplicito.putExtra("mascota",mejillas);
 
         startActivity(intentExplicito);
+    }
+
+    fun irAAdapter(){
+        val intent = Intent(this,ListViewActivity::class.java)
+        startActivity(intent)
     }
 }
