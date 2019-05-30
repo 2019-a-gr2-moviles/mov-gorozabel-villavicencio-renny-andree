@@ -40,5 +40,6 @@ class ListViewActivity : AppCompatActivity() {
         Snackbar
             .make(view, texto, Snackbar.LENGTH_LONG)
             .setAction("Action", null)
+            .show()
     }
 }
