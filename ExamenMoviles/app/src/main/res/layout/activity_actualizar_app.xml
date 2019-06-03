@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActualizarApp">
+
+    <TextView
+            android:text="@string/lbNombreP"
+            android:layout_width="95dp"
+            android:layout_height="32dp"
+            android:id="@+id/textView" android:textSize="24sp"
+            android:textColor="@color/blanco" android:textStyle="bold" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.196"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.346"/>
+    <TextView
+            android:text="@string/pHFecha"
+            android:layout_width="95dp"
+            android:layout_height="32dp"
+            android:id="@+id/textView6" android:textSize="24sp"
+            android:textColor="@color/blanco" android:textStyle="bold" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.196"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.656"/>
+    <TextView
+            android:text="@string/costo"
+            android:layout_width="95dp"
+            android:layout_height="32dp"
+            android:id="@+id/textView7" android:textSize="24sp"
+            android:textColor="@color/blanco" android:textStyle="bold" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.196"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.767"/>
+    <TextView
+            android:text="@string/pHVersionApi"
+            android:layout_width="95dp"
+            android:layout_height="32dp"
+            android:id="@+id/textView4" android:textSize="24sp"
+            android:textColor="@color/blanco" android:textStyle="bold" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.185"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.226"/>
+    <TextView
+            android:text="@string/pHpesoGigas"
+            android:layout_width="99dp"
+            android:layout_height="70dp"
+            android:id="@+id/textView3" android:textSize="24sp"
+            android:textColor="@color/blanco" android:textStyle="bold" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.185"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.026"/>
+    <TextView
+            android:text="@string/pHUrlD"
+            android:layout_width="117dp"
+            android:layout_height="75dp"
+            android:id="@+id/textView5" android:textSize="24sp"
+            android:textColor="@color/blanco" android:textStyle="bold" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.199"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.529"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="171dp"
+            android:layout_height="59dp"
+            app:layout_constraintTop_toTopOf="@+id/textView3" app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/textView3"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pHpesoGigas" android:id="@+id/txtGB" android:textColor="@color/blanco"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="163dp"
+            android:layout_height="53dp"
+            app:layout_constraintTop_toTopOf="@+id/textView4" app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toEndOf="@+id/textView4" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pHVersionApi" android:id="@+id/txtVersion" android:textColor="@color/blanco"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="174dp"
+            android:layout_height="59dp"
+            app:layout_constraintTop_toTopOf="@+id/textView" app:layout_constraintBottom_toBottomOf="@+id/textView"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pHNombre" android:id="@+id/txtNombre" android:textColor="@color/blanco"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="154dp"
+            android:layout_height="51dp"
+            app:layout_constraintStart_toEndOf="@+id/textView5" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/textView5" app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.213" app:layout_constraintVertical_bias="0.375">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pHUrlD" android:id="@+id/txtUrl" android:textColor="@color/blanco"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="173dp"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toEndOf="@+id/textView6" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/textView6" app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pHFecha" android:id="@+id/txtFecha" android:textColor="@color/blanco"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="170dp"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toEndOf="@+id/textView7" android:layout_marginStart="40dp"
+            app:layout_constraintTop_toTopOf="@+id/textView7" app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.521"
+            app:layout_constraintHorizontal_bias="0.051" android:id="@+id/textInputLayout2">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/costo" android:id="@+id/txtCosto" android:textColor="@color/blanco"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+            android:text="@string/actualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/botonActualizar" app:layout_constraintEnd_toStartOf="@+id/botonEliminar"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginBottom="64dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.634"/>
+    <Button
+            android:text="@string/eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/botonEliminar" android:layout_marginBottom="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="84dp"/>
+</android.support.constraint.ConstraintLayout>

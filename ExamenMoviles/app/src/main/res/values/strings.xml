@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">ExamenMoviles</string>
+    <string name="lbNombreP">Nombre:</string>
+    <string name="placeHNombre">Usuario</string>
+    <string name="btnEntrar">Entrar</string>
+    <string name="btnGestionPapas">Gestionar S.O.</string>
+    <string name="btnCrearPapas">Crear S.O.</string>
+    <string name="pHNombre">Nombre</string>
+    <string name="pHVersionApi">Version Api</string>
+    <string name="pHFecha">Fecha Lanzamiento</string>
+    <string name="pHpesoGigas">Peso en GB</string>
+    <string name="lbInstalado">¿Instalado?</string>
+    <string name="pHUrlD">Url Descarga</string>
+    <string name="costo">Costo</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="crearApp">Crear App</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="gestionarApp">Gestionar Apps</string>
+    <string name="regresar">Regresar</string>
+    <string name="msgActualizado">Registro Actualizado </string>
+    <string name="msgEliminado">Registro Eliminado </string>
+    <string name="msgRegistro">Registro exitoso </string>
 </resources>
