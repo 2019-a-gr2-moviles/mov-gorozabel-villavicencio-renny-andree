@@ -31,7 +31,7 @@ class IngresarApp : AppCompatActivity() {
             version = text_Version.text.toString().toInt(),
             nombre = textNombre.text.toString(),
             urlDescarga = text_URL.text.toString(),
-            fechaLanzamiento = Date(text_Fecha.text.toString()),
+            fechaLanzamiento = text_Fecha.text.toString(),
             costo = textCosto.text.toString().toDouble(),
             sistemaOperativoId = padreId
         )

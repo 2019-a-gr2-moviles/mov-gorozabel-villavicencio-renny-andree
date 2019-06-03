@@ -9,7 +9,7 @@ class Aplicacion(var id:Int?,
                  var version:Int,
                  var nombre:String,
                  var urlDescarga:String,
-                 var fechaLanzamiento:Date,
+                 var fechaLanzamiento:String,
                  var costo:Double,
                  var sistemaOperativoId:Int):Parcelable {
     constructor(parcel: Parcel) : this(
@@ -18,7 +18,7 @@ class Aplicacion(var id:Int?,
         parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readSerializable() as Date,
+        parcel.readString(),
         parcel.readDouble(),
         parcel.readInt()
     ) {
@@ -30,7 +30,7 @@ class Aplicacion(var id:Int?,
         parcel.writeInt(version)
         parcel.writeString(nombre)
         parcel.writeString(urlDescarga)
-        parcel.writeSerializable(fechaLanzamiento)
+        parcel.writeString(fechaLanzamiento)
         parcel.writeDouble(costo)
         parcel.writeInt(sistemaOperativoId)
     }

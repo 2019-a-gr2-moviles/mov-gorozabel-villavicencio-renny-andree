@@ -7,14 +7,14 @@ import java.util.*
 class SistemaOperativo(var id:Int?,
                        var nombre:String,
                        var versionApi:Int,
-                       var fechaLanzamiento:Date,
+                       var fechaLanzamiento:String,
                        var pesoEnGigas:Double,
                        var instalado:Boolean):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),
         parcel.readInt(),
-        parcel.readSerializable() as Date,
+        parcel.readString(),
         parcel.readDouble(),
         parcel.readByte() != 0.toByte()
     ) {
@@ -24,7 +24,7 @@ class SistemaOperativo(var id:Int?,
         parcel.writeValue(id)
         parcel.writeString(nombre)
         parcel.writeInt(versionApi)
-        parcel.writeSerializable(fechaLanzamiento)
+        parcel.writeString(fechaLanzamiento)
         parcel.writeDouble(pesoEnGigas)
         parcel.writeByte(if (instalado) 1 else 0)
     }

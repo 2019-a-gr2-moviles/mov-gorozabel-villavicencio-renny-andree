@@ -42,7 +42,7 @@ class ActualizarSO : AppCompatActivity() {
             id=padreId,
             nombre=text_Nombre.text.toString(),
             versionApi = textVersion.text.toString().toInt(),
-            fechaLanzamiento = Date(textFecha.text.toString()),
+            fechaLanzamiento = textFecha.text.toString(),
             pesoEnGigas = textGB.text.toString().toDouble(),
             instalado = checkBox.isChecked
         )
@@ -64,7 +64,7 @@ class ActualizarSO : AppCompatActivity() {
             id=padreId,
             nombre=text_Nombre.text.toString(),
             versionApi = textVersion.text.toString().toInt(),
-            fechaLanzamiento = Date(textFecha.text.toString()),
+            fechaLanzamiento = textFecha.text.toString(),
             pesoEnGigas = textGB.text.toString().toDouble(),
             instalado = checkBox.isChecked
         )
@@ -79,7 +79,7 @@ class ActualizarSO : AppCompatActivity() {
             id = padreId,
             nombre = text_Nombre.text.toString(),
             versionApi = textVersion.text.toString().toInt(),
-            fechaLanzamiento = Date(textFecha.text.toString()),
+            fechaLanzamiento = textFecha.text.toString(),
             pesoEnGigas = textGB.text.toString().toDouble(),
             instalado = checkBox.isChecked
         )

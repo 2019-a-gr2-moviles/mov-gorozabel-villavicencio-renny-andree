@@ -32,7 +32,7 @@ class IngresarSo : AppCompatActivity() {
             id=null,
             nombre=tNombre.text.toString(),
             versionApi = tVersion.text.toString().toInt(),
-            fechaLanzamiento = Date(tFecha.text.toString()),
+            fechaLanzamiento = tFecha.text.toString(),
             pesoEnGigas = tGB.text.toString().toDouble(),
             instalado = checkBox2.isChecked
         )

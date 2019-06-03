@@ -1,5 +1,6 @@
 package com.example.examenmoviles.BDatos
 
+import android.util.Log
 import com.example.examenmoviles.interfaces.Aplicacion
 
 class BDAplicacion{
@@ -21,6 +22,7 @@ class BDAplicacion{
             LST_APLICACION.removeAll{it.id == id}
         }
         fun actualizarAplicacion(app:Aplicacion){
+            Log.i("IndiceActualizar",app.id.toString())
             val indice = LST_APLICACION.indexOfFirst { it.id == app.id }
             LST_APLICACION[indice] = app
         }

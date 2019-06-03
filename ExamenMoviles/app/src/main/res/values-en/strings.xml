@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppMobile</string>
+    <string name="actualizar">Update</string>
+    <string name="btnCrearPapas">Create O.S.</string>
+    <string name="btnEntrar">Login</string>
+    <string name="btnGestionPapas">Manage O.S.</string>
+    <string name="btnRegistrar">Register</string>
+    <string name="costo">Cost</string>
+    <string name="crearApp">Create App</string>
+    <string name="eliminar">Delete</string>
+    <string name="gestionarApp">Manage Apps</string>
+    <string name="lbInstalado">is install?</string>
+    <string name="lbNombreP">Name:</string>
+    <string name="msgActualizado">Updated!</string>
+    <string name="msgEliminado">Deleted!</string>
+    <string name="msgRegistro">Success!</string>
+    <string name="pHFecha">Date Launch</string>
+    <string name="pHNombre">Name</string>
+    <string name="pHUrlD">Download URL</string>
+    <string name="pHVersionApi">Api Version</string>
+    <string name="pHpesoGigas">Storage</string>
+    <string name="placeHNombre">User</string>
+    <string name="regresar">Back</string>
+</resources>

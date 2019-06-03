@@ -35,12 +35,12 @@ class ActualizarApp : AppCompatActivity() {
     }
     fun actualizarApp(){
         val app = Aplicacion(
-            id = null,
+            id = id,
             pesoEnGigas = txtGB.text.toString().toDouble(),
             version = txtVersion.text.toString().toInt(),
             nombre = txtNombre.text.toString(),
             urlDescarga = txtUrl.text.toString(),
-            fechaLanzamiento = Date(txtFecha.toString()),
+            fechaLanzamiento = txtFecha.toString(),
             costo = txtCosto.text.toString().toDouble(),
             sistemaOperativoId = idPadre
         )
