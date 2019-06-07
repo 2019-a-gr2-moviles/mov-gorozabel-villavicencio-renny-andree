@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun irARecycleView(){
+        val intent = Intent(this,ReciclerViewActivity::class.java)
+        startActivity(intent)
+    }
+
     fun irAParcelabel(){
         val intentExplicito = Intent(this,ParceLabel::class.java)
         val renny = Usuario("Renny",21,Date(),193.4)
