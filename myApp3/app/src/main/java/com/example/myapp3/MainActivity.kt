@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         btn_parcelabel.setOnClickListener { irAParcelabel() }
         btn_Adapter.setOnClickListener { irAAdapter() }
+        btn_recycleview.setOnClickListener { irARecycleView() }
+        btn_respuesta.setOnClickListener { irARespuesta() }
 
         val tito: Usuario? = this.intent
             .getParcelableExtra<Usuario>("usuario1")
@@ -44,6 +46,11 @@ class MainActivity : AppCompatActivity() {
 
     fun irAAdapter(){
         val intent = Intent(this,ListViewActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irARespuesta(){
+        val intent = Intent(this,Respuesta::class.java)
         startActivity(intent)
     }
 }

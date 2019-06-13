@@ -27,12 +27,12 @@ class ListViewActivity : AppCompatActivity() {
             android.R.layout.simple_list_item_1,
             listaNombres)
 
-        lv_example.adapter = adapter
+        /*lv_example.adapter = adapter
 
         lv_example.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
             Log.i("list-view","Posicion $position")
             mostrarSnack(view,"A seleccionado el item $position")
-        }
+        }*/
 
     }
 
