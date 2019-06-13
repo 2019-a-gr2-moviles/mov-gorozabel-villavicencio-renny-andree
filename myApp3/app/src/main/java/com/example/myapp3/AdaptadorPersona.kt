@@ -31,6 +31,18 @@ class PersonasAdaptador(
                 .setOnClickListener{
                     Log.i("recycler-view","Layout presionado")
                 }
+            accionBoton.setOnClickListener {
+                nombreTextView.text = "NANI?!"
+                contexto.cambiarNombreTextView("Me cambiaron")
+
+                val nuevasPersonas = arrayListOf<Persona>()
+
+                nuevasPersonas.add(Persona("Felipe","1928475930"))
+                nuevasPersonas.add(Persona("Juan","1495827364"))
+                nuevasPersonas.add(Persona("Miguel","2947583668"))
+
+                contexto.iniciarRecylerView(nuevasPersonas,contexto,recyclerView)
+            }
         }
     }
     // Esta funcion define el template que vamos a utilizar
