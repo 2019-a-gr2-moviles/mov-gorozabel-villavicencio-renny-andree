@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pinterest1</string>
+    <string name="buscar">Buscar</string>
+    <string name="inicio">Inicio</string>
+    <string name="siguiendo">Siguiendo</string>
+    <string name="Notificaciones">Notificaciones</string>
+    <string name="Guardado">Guardado</string>
+</resources>
