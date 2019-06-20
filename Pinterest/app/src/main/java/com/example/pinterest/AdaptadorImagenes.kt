@@ -26,7 +26,7 @@ class AdaptadorImagenes(
         init{
             imageView1 = view.findViewById(R.id.img1) as ImageView
 
-            val layout = view.findViewById(R.id.layoutg) as LinearLayout
+            val layout = view.findViewById(R.id.layoutg) as GridLayout
 
             layout.setOnClickListener {
                 Log.i("imagen","imagenPresionanada")
@@ -61,8 +61,10 @@ class AdaptadorImagenes(
             Log.i("posicion",indice.toString())
             val intent = Intent(contexto.applicationContext,Informacion::class.java)
             intent.addFlags(FLAG_ACTIVITY_NEW_TASK)
-            val listaExtra = Imagenes(foto.txtInfo,foto.imageId,foto.descripcion)
+            val listaEx = listaImg
+            val listaExtra = Imagenes(foto.txtInfo,foto.imageId,foto.descripcion,foto.like)
             intent.putExtra("imagen",listaExtra)
+            intent.putExtra("posicion",position)
             contexto.applicationContext.startActivity(intent)
         }
     }

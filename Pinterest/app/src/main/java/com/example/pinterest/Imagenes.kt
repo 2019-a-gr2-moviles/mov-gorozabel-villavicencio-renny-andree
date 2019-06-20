@@ -4,11 +4,12 @@ import android.graphics.drawable.Drawable
 import android.os.Parcel
 import android.os.Parcelable
 
-class Imagenes(var txtInfo:String,var imageId:Int, var descripcion:String):Parcelable {
+class Imagenes(var txtInfo:String,var imageId:Int, var descripcion:String,var like:Boolean):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt(),
-        parcel.readString()
+        parcel.readString(),
+        parcel.readByte() != 0.toByte()
     ) {
     }
 
@@ -16,6 +17,7 @@ class Imagenes(var txtInfo:String,var imageId:Int, var descripcion:String):Parce
         parcel.writeString(txtInfo)
         parcel.writeInt(imageId)
         parcel.writeString(descripcion)
+        parcel.writeByte(if (like) 1 else 0)
     }
 
     override fun describeContents(): Int {
