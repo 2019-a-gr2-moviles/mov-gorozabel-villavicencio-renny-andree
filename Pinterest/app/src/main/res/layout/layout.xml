@@ -6,8 +6,13 @@
             android:columnCount="2"
             android:orientation="vertical"
             android:id="@+id/layoutg">
+    <TextView
+            android:text="Añadelo como Favorito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/txtLike"/>
     <ImageView
             android:padding="10dp"
+            android:adjustViewBounds="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars" android:id="@+id/img1"
             android:contentDescription="@string/inicio"/>
