@@ -7,24 +7,31 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_informacion.*
 
 class Informacion : AppCompatActivity() {
-    var posicion:Int?=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacion)
 
-        val image:Imagenes?=this.intent.getParcelableExtra("imagen")
-        posicion=this.intent.getIntExtra("posicion",0)
+        val data=this.intent.getParcelableArrayListExtra<Imagenes>("data")
 
-        txtInfo.text=image?.txtInfo
-        imagenInfo.setImageResource(image!!.imageId)
-        txtDescripcion.text = image?.descripcion
-        likeCheck.isChecked=image?.like
+
+        val image:Imagenes?=this.intent.getParcelableExtra("imagen")
+        val posicion=this.intent.getIntExtra("posicion",0)
+
+        val elemento = data[posicion]
+
+        txtInfo.text=elemento?.txtInfo
+        imagenInfo.setImageResource(elemento!!.imageId)
+        txtDescripcion.text = elemento?.descripcion
+        likeCheck.isChecked=elemento!!.like
     }
 
     override fun onBackPressed() {
+        val data = this.intent.getParcelableArrayListExtra<Imagenes>("data")
+        val posicion = this.intent.getIntExtra("posicion",-1)
+        data[posicion].like=likeCheck.isChecked
         val intent = Intent(this,MainActivity::class.java)
-        intent.putExtra("imagen",Imagenes(txtInfo.text.toString(),imagenInfo.id,txtDescripcion.text.toString(),likeCheck.isChecked))
-        intent.putExtra("posicion",posicion)
+        intent.putParcelableArrayListExtra("datos",data)
+        intent.putExtra("envio",0)
         startActivity(intent)
     }
 }

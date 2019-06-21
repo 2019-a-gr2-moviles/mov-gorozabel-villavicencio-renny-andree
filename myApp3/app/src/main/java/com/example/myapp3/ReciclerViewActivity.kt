@@ -28,7 +28,7 @@ class ReciclerViewActivity : AppCompatActivity() {
 
     }
     fun cambiarNombreTextView(texto:String){
-        txt_titulo_rv.text = texto;
+        txt_titulo_rv.text = texto
     }
     fun iniciarRecylerView(
         lista: List<Persona>,

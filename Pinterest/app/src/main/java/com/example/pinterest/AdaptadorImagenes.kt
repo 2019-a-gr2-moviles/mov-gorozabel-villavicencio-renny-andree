@@ -13,7 +13,7 @@ import android.view.ViewGroup
 import android.widget.*
 
 class AdaptadorImagenes(
-    private val listaImg:List<Imagenes>,
+    private val listaImg:ArrayList<Imagenes>,
     private val contexto:MainActivity,
     private val recyclerView:RecyclerView
 ):
@@ -22,9 +22,11 @@ class AdaptadorImagenes(
 
     inner class MyViewHolder(view:View):RecyclerView.ViewHolder(view){
         var imageView1:ImageView
+        var txtLike:TextView
 
         init{
             imageView1 = view.findViewById(R.id.img1) as ImageView
+            txtLike = view.findViewById(R.id.txtLike) as TextView
 
             val layout = view.findViewById(R.id.layoutg) as GridLayout
 
@@ -55,6 +57,9 @@ class AdaptadorImagenes(
                                   position: Int){
         val foto = listaImg[position]
         myViewHolder.imageView1.setImageResource(foto.imageId)
+        if(foto.like){
+            myViewHolder.txtLike.text = "¡Te gusta!"
+        }
 
         myViewHolder.imageView1.setOnClickListener{
             indice = myViewHolder.adapterPosition
@@ -63,6 +68,7 @@ class AdaptadorImagenes(
             intent.addFlags(FLAG_ACTIVITY_NEW_TASK)
             val listaEx = listaImg
             val listaExtra = Imagenes(foto.txtInfo,foto.imageId,foto.descripcion,foto.like)
+            intent.putParcelableArrayListExtra("data",listaEx)
             intent.putExtra("imagen",listaExtra)
             intent.putExtra("posicion",position)
             contexto.applicationContext.startActivity(intent)

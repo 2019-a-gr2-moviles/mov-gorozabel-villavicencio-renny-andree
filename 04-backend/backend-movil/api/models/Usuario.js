@@ -51,6 +51,14 @@ module.exports = {
   correo:{
       type:'string',
       isEmail:true
+  },
+  // CONFIGURACION DEL PAPA
+  serviciosDeUsuario:{ // Nombre atributo de la relacion
+      collection: 'servicio', // Nombre del modelo a relacionar
+      via: 'fkUsuario' //  Nombre del atributo FK del otro modelo
+  },
+  fkEmpresa:{
+      model:'empresa'
   }
 }
 
@@ -102,4 +110,4 @@ module.exports = {
 // http://localhost:1337/usuario?where={"nombre":{"contains":"a"}}
 // http://localhost:1337/usuario?where={"sueldo":{"<=":3000}}
 // http://localhost:1337/usuario?where={"nombre":{"<=":"2018-01-01"}}
-// http://localhost:1337/usuario?where={"nombre":{"endsWith":"@gmail.com"}}
+// http://localhost:1337/usuario?where={"nombre":{"endsWith":"@gmail.com"}}n
