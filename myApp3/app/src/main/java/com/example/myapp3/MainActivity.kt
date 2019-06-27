@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         btn_Adapter.setOnClickListener { irAAdapter() }
         btn_recycleview.setOnClickListener { irARecycleView() }
         btn_respuesta.setOnClickListener { irARespuesta() }
+        btn_http.setOnClickListener { irAHttp() }
 
         val tito: Usuario? = this.intent
             .getParcelableExtra<Usuario>("usuario1")
@@ -51,6 +52,11 @@ class MainActivity : AppCompatActivity() {
 
     fun irARespuesta(){
         val intent = Intent(this,Respuesta::class.java)
+        startActivity(intent)
+    }
+
+    fun irAHttp(){
+        val intent = Intent(this,ConexionHttpActivity::class.java)
         startActivity(intent)
     }
 }
