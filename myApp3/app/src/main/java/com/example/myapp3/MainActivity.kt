@@ -1,7 +1,7 @@
 package com.example.myapp3
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         btn_recycleview.setOnClickListener { irARecycleView() }
         btn_respuesta.setOnClickListener { irARespuesta() }
         btn_http.setOnClickListener { irAHttp() }
+        btn_mapa.setOnClickListener{ irAMapa() }
+
 
         val tito: Usuario? = this.intent
             .getParcelableExtra<Usuario>("usuario1")
@@ -27,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         Log.i("parcelable","Fecha Nacimiento ${tito?.fechaNacimiento.toString()}")
         Log.i("parcelable","Sueldo ${tito?.sueldo}")
 
+    }
+
+    fun irAMapa(){
+        val intent = Intent(this,MapsActivity::class.java)
+        startActivity(intent)
     }
 
     fun irARecycleView(){

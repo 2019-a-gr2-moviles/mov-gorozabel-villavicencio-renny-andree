@@ -1,12 +1,11 @@
 package com.example.myapp3
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_list_view.*
 
 class ListViewActivity : AppCompatActivity() {
@@ -37,8 +36,8 @@ class ListViewActivity : AppCompatActivity() {
     }
 
     fun mostrarSnack(view: View, texto:String){
-        Snackbar
-            .make(view, texto, Snackbar.LENGTH_LONG)
+        com.google.android.material.snackbar.Snackbar
+            .make(view, texto, com.google.android.material.snackbar.Snackbar.LENGTH_LONG)
             .setAction("Action", null)
             .show()
     }

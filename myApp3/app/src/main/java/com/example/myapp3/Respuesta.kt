@@ -1,8 +1,7 @@
 package com.example.myapp3
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
@@ -42,7 +41,7 @@ class Respuesta : AppCompatActivity() {
 
         when(resultCode){
             RESULT_OK ->{
-                Log.i("intent-respuesta","LO LOGRAMOS!! ${Activity.RESULT_OK}")
+                Log.i("intent-respuesta","LO LOGRAMOS!! ${AppCompatActivity.RESULT_OK}")
 
                 when(requestCode){
                     304->{
@@ -74,7 +73,7 @@ class Respuesta : AppCompatActivity() {
 
                 }
             }
-            Activity.RESULT_CANCELED->{
+            AppCompatActivity.RESULT_CANCELED->{
                 Log.i("intent-respuesta","No escogio ese man, ya danio la App")
             }
         }

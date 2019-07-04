@@ -5,4 +5,5 @@
     <string name="txt_titulo_rv">Aqui va mi Genial lista</string>
     <string name="intent_respuesta">Respuesta</string>
     <string name="devolverRespuesta">Devolver Respuesta</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

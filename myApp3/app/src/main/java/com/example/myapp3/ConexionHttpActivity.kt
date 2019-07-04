@@ -1,8 +1,8 @@
 package com.example.myapp3
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.result.Result.*
 import com.github.kittinunf.fuel.httpGet
