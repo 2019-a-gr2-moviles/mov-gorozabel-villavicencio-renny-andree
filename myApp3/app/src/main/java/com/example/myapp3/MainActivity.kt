@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         btn_respuesta.setOnClickListener { irARespuesta() }
         btn_http.setOnClickListener { irAHttp() }
         btn_mapa.setOnClickListener{ irAMapa() }
+        btn_frag.setOnClickListener{irFragmentos()}
+        btnVida.setOnClickListener{irCicloVida()}
 
 
         val tito: Usuario? = this.intent
@@ -31,8 +33,19 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun irFragmentos(){
+        val intent = Intent(this,actividadFragmento::class.java)
+        startActivity(intent)
+    }
+
     fun irAMapa(){
         val intent = Intent(this,MapsActivity::class.java)
+        startActivity(intent)
+    }
+    fun irCicloVida(){
+        val intent = Intent(
+            this,CicloVidaActivity::class.java
+        )
         startActivity(intent)
     }
 
